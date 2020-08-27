@@ -1,0 +1,179 @@
+@charset "UTF-8";
+*, *::after, *::before {
+  outline: none;
+  box-sizing: border-box;
+}
+
+ul, li {
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+}
+
+.page {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  position: relative;
+  background: #3035C3;
+  box-shadow: 0px 10px 40px rgba(0, 11, 68, 0.22);
+  z-index: 999;
+}
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 26px 0;
+}
+.header-wrapper .phones {
+  display: flex;
+}
+.header-wrapper .phones-number {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-left: 50px;
+  flex-wrap: wrap;
+  max-width: 230px;
+}
+.header-wrapper .phones-number__link {
+  margin-left: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+.header-wrapper .phones-number:nth-child(2)::after {
+  content: "(Только для сообщений)";
+  position: absolute;
+  max-width: 100px;
+  font-size: 9px;
+  line-height: 11px;
+  color: #ffffff;
+  bottom: 0;
+  right: 20%;
+}
+
+.main-screen {
+  background: #3035C3;
+  position: relative;
+  padding: 140px 0 172px;
+}
+.main-screen .main {
+  max-width: 570px;
+}
+.main-screen .main-suptitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #E6514A;
+  line-height: 130%;
+}
+.main-screen .main-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  margin: 16px 0 32px;
+  font-size: 48px;
+  line-height: 130%;
+  color: #ffffff;
+}
+.main-screen .main-desc {
+  font-size: 16px;
+  line-height: 150%;
+  color: #ffffff;
+  margin-bottom: 70px;
+}
+.main-screen .main-btn {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 16px 63px;
+  background: #E6514A;
+  border-radius: 30px;
+  border: none;
+}
+.main-screen .main-img {
+  position: absolute;
+  top: -20px;
+  right: -30px;
+  max-width: 700px;
+  height: 900px;
+}
+
+.receive {
+  position: relative;
+  padding: 80px 0;
+  margin-top: 80px;
+}
+.receive-bg {
+  position: absolute;
+}
+.receive-suptitle {
+  display: flex;
+  font-size: 14px;
+  line-height: 17px;
+  color: #23283B;
+}
+.receive-suptitle::before {
+  content: "";
+  display: inline-block;
+  align-self: center;
+  width: 40px;
+  height: 1px;
+  margin-right: 12px;
+  background: #E6514A;
+}
+.receive-title {
+  font-family: "Montserrat", sans-serif;
+  padding: 20px 0 40px;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 130%;
+  color: #23283B;
+}
+.receive-map {
+  display: flex;
+  background-position: center;
+  height: 400px;
+}
+.receive-map .card {
+  display: flex;
+  flex-direction: column;
+}
+.receive-map .card:nth-child(1) {
+  align-self: flex-end;
+}
+.receive-map .card-img {
+  max-width: 120px;
+  height: auto;
+  margin: 0 auto;
+}
+.receive-map .card-desc {
+  max-width: 170px;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #23283B;
+}
+.receive-map .card-desc__bold {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #23283B;
+}
