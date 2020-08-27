@@ -14,6 +14,22 @@ body {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #23283B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E6514A;
+}
+
 .page {
   max-width: 1920px;
   margin: 0 auto;
@@ -24,16 +40,50 @@ body {
   margin: 0 auto;
 }
 
+.suptitle {
+  display: flex;
+  font-size: 14px;
+  line-height: 17px;
+  color: #23283B;
+}
+.suptitle::before {
+  content: "";
+  display: inline-block;
+  align-self: center;
+  width: 40px;
+  height: 1px;
+  margin-right: 12px;
+  background: #E6514A;
+}
+
+.red-btn {
+  padding: 16px 58px;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  border: none;
+  background: #E6514A;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+}
+
 .header {
   position: relative;
   background: #3035C3;
   box-shadow: 0px 10px 40px rgba(0, 11, 68, 0.22);
   z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: 0.6s;
+  padding: 26px 0;
 }
 .header-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 26px 0;
 }
 .header-wrapper .phones {
   display: flex;
@@ -55,6 +105,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 1px;
+  transition: 0.6s;
 }
 .header-wrapper .phones-number:nth-child(2)::after {
   content: "(Только для сообщений)";
@@ -63,6 +114,25 @@ body {
   font-size: 9px;
   line-height: 11px;
   color: #ffffff;
+  transition: 0.6s;
+  bottom: 0;
+  right: 20%;
+}
+
+.sticky {
+  padding: 15px 100px;
+  background: #ffffff;
+}
+.sticky .phones-number__link {
+  color: #23283B;
+}
+.sticky .phones-number:nth-child(2)::after {
+  content: "(Только для сообщений)";
+  position: absolute;
+  max-width: 100px;
+  font-size: 9px;
+  line-height: 11px;
+  color: #23283B;
   bottom: 0;
   right: 20%;
 }
@@ -70,7 +140,7 @@ body {
 .main-screen {
   background: #3035C3;
   position: relative;
-  padding: 140px 0 172px;
+  padding: 200px 0 172px;
 }
 .main-screen .main {
   max-width: 570px;
@@ -117,27 +187,18 @@ body {
 }
 
 .receive {
-  position: relative;
   padding: 80px 0;
   margin-top: 80px;
 }
+.receive .container {
+  position: relative;
+}
 .receive-bg {
   position: absolute;
-}
-.receive-suptitle {
-  display: flex;
-  font-size: 14px;
-  line-height: 17px;
-  color: #23283B;
-}
-.receive-suptitle::before {
-  content: "";
-  display: inline-block;
-  align-self: center;
-  width: 40px;
-  height: 1px;
-  margin-right: 12px;
-  background: #E6514A;
+  max-width: 100%;
+  top: 10%;
+  left: 0;
+  z-index: -10;
 }
 .receive-title {
   font-family: "Montserrat", sans-serif;
@@ -155,12 +216,28 @@ body {
 .receive-map .card {
   display: flex;
   flex-direction: column;
+  margin-right: 25px;
 }
 .receive-map .card:nth-child(1) {
-  align-self: flex-end;
+  margin-top: 160px;
+}
+.receive-map .card:nth-child(2) {
+  margin-top: 200px;
+}
+.receive-map .card:nth-child(3) {
+  margin-top: 90px;
+}
+.receive-map .card:nth-child(4) {
+  margin-top: 80px;
+}
+.receive-map .card:nth-child(5) {
+  margin-top: 130px;
+}
+.receive-map .card:nth-child(6) {
+  margin-top: 0;
 }
 .receive-map .card-img {
-  max-width: 120px;
+  max-width: 140px;
   height: auto;
   margin: 0 auto;
 }
@@ -176,4 +253,124 @@ body {
   font-size: 16px;
   line-height: 150%;
   color: #23283B;
+}
+
+.benefit {
+  padding: 40px 0 80px;
+}
+.benefit-suptitle {
+  justify-content: center;
+}
+.benefit-title {
+  margin: 20px 0 50px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 130%;
+  color: #23283B;
+}
+.benefit .swiper-container {
+  height: 470px;
+  width: 1240px;
+}
+.benefit-card {
+  position: relative;
+  max-width: 370px;
+  min-height: 430px;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 24px rgba(73, 95, 211, 0.12);
+  border-radius: 10px;
+  margin: 0 15px;
+  padding: 32px 32px 0 32px;
+  z-index: 1;
+}
+.benefit-card__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 24px;
+  color: #23283B;
+  line-height: 130%;
+}
+.benefit-card__desc {
+  font-size: 16px;
+  line-height: 150%;
+  color: #23283B;
+}
+.benefit-card__img {
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  z-index: -10;
+}
+.benefit-menu {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-between;
+}
+.benefit-menu__arr {
+  display: flex;
+  justify-content: center;
+  align-center: center;
+  border: none;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 50%;
+  padding: 20px 23px;
+  box-shadow: 0px 10px 40px rgba(0, 11, 68, 0.22);
+}
+
+.about {
+  padding: 80px 0;
+  background: #F8F8FF;
+}
+.about .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.about-content {
+  max-width: 570px;
+}
+.about-img {
+  margin-top: 60px;
+  height: 884px;
+}
+.about-title {
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+  margin: 20px 0 32px;
+  font-size: 32px;
+  line-height: 130%;
+  color: #23283B;
+}
+.about-card {
+  display: flex;
+  margin-bottom: 24px;
+}
+.about-card__img {
+  max-width: 24px;
+  height: 24px;
+  margin-right: 20px;
+  margin-top: 4px;
+}
+.about-card-text {
+  display: flex;
+  flex-direction: column;
+}
+.about-card-text__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  color: #23283B;
+  margin-bottom: 12px;
+}
+.about-card-text__desc {
+  font-size: 16px;
+  line-height: 150%;
+  color: #23283B;
+}
+.about-btn {
+  display: flex;
+  margin: 60px auto 0;
 }
