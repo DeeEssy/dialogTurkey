@@ -1,12 +1,21 @@
 'use strict'
 
-var mySwiper = new Swiper('.swiper-container', {
+var mySwiper = new Swiper('.benefit-swiper', {
     speed: 400,
     slidesPerView: 3,
     loop: true,
     navigation: {
         nextEl: '.benefit-next__arr',
         prevEl: '.benefit-prev__arr',
+    },
+});
+var mySwiper2 = new Swiper('.levels-swiper', {
+    speed: 400,
+    slidesPerView: 3,
+    loop: true,
+    navigation: {
+        nextEl: '.levels-next__arr',
+        prevEl: '.levels-prev__arr',
     },
 });
 
