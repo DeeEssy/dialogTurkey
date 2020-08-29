@@ -115,6 +115,7 @@ body
     background: $blue
     position: relative
     padding: 200px 0 172px
+    margin-bottom: 60px
     .main
         max-width: 570px
         &-suptitle
@@ -148,13 +149,12 @@ body
             border: none
     .main-img
         position: absolute
-        top: -20px
-        right: -30px
+        top: 0
+        right: 0
         max-width: 700px
         height: 900px
 .receive
     padding: 80px 0
-    margin-top: 80px
     .container
         position: relative
     &-bg
@@ -542,3 +542,90 @@ body
     &-btn
         display: flex
         margin: 0 auto
+.reviews
+    padding: 100px 0 50px
+    &-suptitle
+        justify-content: center
+    &-title
+        font-weight: 800
+        font-size: 40px
+        line-height: 130%
+        font-family: 'Montserrat', sans-serif
+        color: $dark
+        text-align: center
+        margin: 20px auto 60px
+        max-width: 730px
+    &-card
+        display: flex
+        flex-direction: column
+        max-width: 350px
+        text-align: center
+        margin: 0 15px
+        &__img
+            max-width: 120px
+            margin: 0 auto
+        &__title
+            margin: 24px 0
+            font-weight: 800
+            font-size: 20px
+            line-height: 130%
+            font-family: 'Montserrat', sans-serif
+            color: $dark
+        &__desc
+            font-size: 16px
+            color: $dark
+            line-height: 150%
+    &-pagination
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: 80px
+    &-bullet
+        display: inline-block
+        width: 18px
+        height: 18px
+        border: 2px solid #DEDEFF
+        border-radius: 100px
+        margin: 0 8px
+        cursor: pointer
+        &-active
+            background: #3035C4
+            border: 2px solid #3035C4
+    &-btn
+        display: flex
+        margin: 60px auto 0
+.tutor
+    padding: 50px 0
+    &-wrapper
+        background-image: url('../img/tutor-bg.png')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        border-radius: 20px
+        padding: 60px 0 60px 70px
+        color: #ffffff
+    &-suptitle
+        color: #ffffff
+    &-title
+        font-weight: 800
+        font-size: 40px
+        font-family: 'Montserrat', sans-serif
+        line-height: 130%
+        max-width: 800px
+        margin: 20px 0 32px
+    &-ol
+        list-style: none
+        counter-reset: num
+        padding: 0
+    &-li
+        margin-bottom: 13px
+        font-size: 16px
+        line-height: 150%
+        &::before
+            content: counter(num) '. '
+            counter-increment: num
+            color: $red
+            font-weight: 800
+            font-family: 'Montserrat', sans-serif
+            font-size: 24px
+            line-height: 150%

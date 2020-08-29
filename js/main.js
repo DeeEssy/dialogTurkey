@@ -18,6 +18,18 @@ var mySwiper2 = new Swiper('.levels-swiper', {
         prevEl: '.levels-prev__arr',
     },
 });
+var mySwiper3 = new Swiper('.reviews-swiper', {
+    speed: 400,
+    slidesPerView: 3,
+    loop: true,
+    pagination: {
+        el: '.reviews-pagination',
+        type: 'bullets',
+        bulletClass: 'reviews-bullet',
+        bulletActiveClass: 'reviews-bullet-active',
+        clickable: true,
+    },
+});
 
 
 window.addEventListener('scroll', () => {

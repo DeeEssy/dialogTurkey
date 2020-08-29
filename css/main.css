@@ -141,6 +141,7 @@ body {
   background: #3035C3;
   position: relative;
   padding: 200px 0 172px;
+  margin-bottom: 60px;
 }
 .main-screen .main {
   max-width: 570px;
@@ -180,15 +181,14 @@ body {
 }
 .main-screen .main-img {
   position: absolute;
-  top: -20px;
-  right: -30px;
+  top: 0;
+  right: 0;
   max-width: 700px;
   height: 900px;
 }
 
 .receive {
   padding: 80px 0;
-  margin-top: 80px;
 }
 .receive .container {
   position: relative;
@@ -665,4 +665,111 @@ body {
 .cost-btn {
   display: flex;
   margin: 0 auto;
+}
+
+.reviews {
+  padding: 100px 0 50px;
+}
+.reviews-suptitle {
+  justify-content: center;
+}
+.reviews-title {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 130%;
+  font-family: "Montserrat", sans-serif;
+  color: #23283B;
+  text-align: center;
+  margin: 20px auto 60px;
+  max-width: 730px;
+}
+.reviews-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  text-align: center;
+  margin: 0 15px;
+}
+.reviews-card__img {
+  max-width: 120px;
+  margin: 0 auto;
+}
+.reviews-card__title {
+  margin: 24px 0;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 130%;
+  font-family: "Montserrat", sans-serif;
+  color: #23283B;
+}
+.reviews-card__desc {
+  font-size: 16px;
+  color: #23283B;
+  line-height: 150%;
+}
+.reviews-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+.reviews-bullet {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #DEDEFF;
+  border-radius: 100px;
+  margin: 0 8px;
+  cursor: pointer;
+}
+.reviews-bullet-active {
+  background: #3035C4;
+  border: 2px solid #3035C4;
+}
+.reviews-btn {
+  display: flex;
+  margin: 60px auto 0;
+}
+
+.tutor {
+  padding: 50px 0;
+}
+.tutor-wrapper {
+  background-image: url("../img/tutor-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  padding: 60px 0 60px 70px;
+  color: #ffffff;
+}
+.tutor-suptitle {
+  color: #ffffff;
+}
+.tutor-title {
+  font-weight: 800;
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 130%;
+  max-width: 800px;
+  margin: 20px 0 32px;
+}
+.tutor-ol {
+  list-style: none;
+  counter-reset: num;
+  padding: 0;
+}
+.tutor-li {
+  margin-bottom: 13px;
+  font-size: 16px;
+  line-height: 150%;
+}
+.tutor-li::before {
+  content: counter(num) ". ";
+  counter-increment: num;
+  color: #E6514A;
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  line-height: 150%;
 }
