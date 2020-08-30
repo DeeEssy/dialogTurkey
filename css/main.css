@@ -773,3 +773,142 @@ body {
   font-size: 24px;
   line-height: 150%;
 }
+
+.teachers {
+  padding: 50px 0 100px;
+}
+.teachers-suptitle {
+  justify-content: center;
+}
+.teachers-title {
+  font-weight: 800;
+  font-size: 40px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  line-height: 130%;
+  max-width: 960px;
+  margin: 20px auto 60px;
+}
+.teachers-card {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  color: #23283B;
+  transition: 0.4s ease;
+}
+.teachers-card__img {
+  margin: 0 auto;
+  max-width: 200px;
+  transition: 0.4s ease;
+}
+.teachers-card__name {
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  margin: 40px 0 20px;
+  line-height: 130%;
+  transition: 0.4s ease;
+}
+.teachers-card__desc {
+  font-size: 16px;
+  line-height: 150%;
+  max-width: 770px;
+  margin: 0 auto;
+  transition: 0.4s ease;
+}
+.teachers .swiper-slide-next,
+.teachers .swiper-slide-prev,
+.teachers .swiper-slide-duplicate-next,
+.teachers .swiper-slide-duplicate-active {
+  position: relative;
+}
+.teachers .swiper-slide-next .teachers-card,
+.teachers .swiper-slide-prev .teachers-card,
+.teachers .swiper-slide-duplicate-next .teachers-card,
+.teachers .swiper-slide-duplicate-active .teachers-card {
+  position: absolute;
+}
+.teachers .swiper-slide-next .teachers-card__img,
+.teachers .swiper-slide-prev .teachers-card__img,
+.teachers .swiper-slide-duplicate-next .teachers-card__img,
+.teachers .swiper-slide-duplicate-active .teachers-card__img {
+  margin-top: 40px;
+  max-width: 120px;
+  opacity: 0.4;
+}
+.teachers .swiper-slide-next .teachers-card__name,
+.teachers .swiper-slide-prev .teachers-card__name,
+.teachers .swiper-slide-duplicate-next .teachers-card__name,
+.teachers .swiper-slide-duplicate-active .teachers-card__name {
+  opacity: 0;
+}
+.teachers .swiper-slide-next .teachers-card__desc,
+.teachers .swiper-slide-prev .teachers-card__desc,
+.teachers .swiper-slide-duplicate-next .teachers-card__desc,
+.teachers .swiper-slide-duplicate-active .teachers-card__desc {
+  opacity: 0;
+}
+.teachers .swiper-slide-active .teachers-card {
+  width: 100%;
+  position: relative;
+}
+.teachers .swiper-slide-active .teachers-card__desc {
+  position: absolute;
+  width: 770px;
+  bottom: -120px;
+  left: -180px;
+}
+.teachers .swiper-button-prev, .teachers .swiper-button-next {
+  top: 100px;
+  background: transparent;
+  width: 13px;
+  height: 21px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.teachers .swiper-button-prev::after, .teachers .swiper-button-next::after {
+  display: none;
+}
+.teachers .swiper-button-prev {
+  background-image: url("../img/teachers-arr-prev.png");
+}
+.teachers .swiper-button-next {
+  background-image: url("../img/teachers-arr-next.png");
+}
+
+.footer {
+  margin-top: 50px;
+  background: url("../img/footer-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  padding: 120px 0;
+}
+.footer-title {
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 130%;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  margin: 0 auto 52px;
+  max-width: 940px;
+}
+.footer-set-btn {
+  background: #ffffff;
+  color: #3035C3;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  padding: 16px 0;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  width: 270px;
+  margin: 0 15px;
+}
+.footer-btn__red {
+  color: #ffffff;
+  background: #E6514A;
+}

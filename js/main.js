@@ -30,7 +30,16 @@ var mySwiper3 = new Swiper('.reviews-swiper', {
         clickable: true,
     },
 });
-
+var mySwiper4 = new Swiper('.teachers-swiper', {
+    speed: 400,
+    slidesPerView: 3,
+    loop: true,
+    centeredSlides: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
 
 window.addEventListener('scroll', () => {
     let header = document.querySelector('.header')
