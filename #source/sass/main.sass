@@ -20,6 +20,16 @@ body
     border-radius: 20px
     &:hover
         background: $red
+.toTop
+    height: 50px
+    width: 50px
+    border-radius: 50%
+    background: $red
+    position: fixed
+    bottom: 40px
+    cursor: pointer
+    right: 30px
+    z-index: 99
 .page
     max-width: 1920px
     margin: 0 auto
@@ -66,17 +76,18 @@ body
         justify-content: space-between
         .phones
             display: flex
+            align-items: center
             &-number
                 display: flex
                 position: relative
                 align-items: center
                 margin-left: 50px
+                text-decoration: none
                 flex-wrap: wrap
                 max-width: 230px
                 &__link
                     margin-left: 10px
                     color: #ffffff
-                    text-decoration: none
                     font-family: 'Montserrat', sans-serif
                     font-weight: bold
                     font-size: 16px
@@ -92,7 +103,7 @@ body
                         line-height: 11px
                         color: #ffffff
                         transition: 0.6s
-                        bottom: 0
+                        bottom: -10px
                         right: 20%
 .sticky
     padding: 15px 100px
@@ -109,7 +120,7 @@ body
                     font-size: 9px
                     line-height: 11px
                     color: $dark
-                    bottom: 0
+                    bottom: -7px
                     right: 20%
 .main-screen
     background: $blue
@@ -734,3 +745,834 @@ body
     &-btn__red
         color: #ffffff
         background: $red
+@media (max-width: 1400px)
+    .container
+        max-width: 1000px
+        padding: 0 10px
+    .main-screen
+        padding: 170px 0 100px
+        .main-img
+            max-width: 500px
+            height: 720px
+    .receive
+        &-bg
+            top: 22%
+        &-map
+            .card
+                &:nth-child(1)
+                    margin-top: 180px
+                &:nth-child(3)
+                    margin-top: 100px
+                &:nth-child(4)
+                    margin-top: 120px
+                &:nth-child(5)
+                    margin-top: 140px
+                &:nth-child(6)
+                    margin-top: 0
+    .benefit
+        padding: 40px 0 80px
+        .swiper-container
+            height: 470px   
+            width: 940px
+        &-card
+            max-width: 470px
+    .result
+        padding: 100px 0
+        &-img
+            max-width: 100%
+            top: 250px
+            left: 0
+        &-map
+            .card
+                &:nth-child(1)
+                    margin-top: 40px
+                    &::after
+                        top: 35px
+                &:nth-child(2)
+                    margin-top: 20px
+                    &::after
+                        top: 45px
+                &:nth-child(3)
+                    margin-top: 140px
+                    &::after
+                        top: -15px
+                &:nth-child(4)
+                    margin-top: -5px
+                    &::after
+                        top: 67px
+                &:nth-child(5)
+                    margin-top: 80px
+                    &::after
+                        top: 13px
+    .tutor
+        &-wrapper
+            padding: 60px 0 60px 70px
+    .teachers
+        .swiper-slide-active
+            .teachers-card
+                &__desc
+                    left: -210px
+    .footer
+        margin-top: 0
+@media (max-width: 1200px)
+    .main-screen
+        .main-img
+            max-width: 420px
+            height: 700px
+    .cost
+        &-form
+            &__label
+                width: 180px
+                padding: 18px 40px 18px 56px    
+@media (max-width: 1000px)
+    .red-btn
+        padding: 13px 35px
+        font-size: 14px
+    .container
+        max-width: 650px
+    .header
+        padding: 26px 0
+        &-wrapper
+            .logo
+                max-width: 100px
+            .phones
+                &-number
+                    display: flex
+                    position: relative
+                    align-items: center
+                    margin-left: 30px
+                    text-decoration: none
+                    flex-wrap: wrap
+                    max-width: 230px
+                    &__link
+                        margin-left: 10px
+                        font-size: 13px
+
+    .sticky
+        padding: 15px 100px
+        background: #ffffff
+        .phones
+            &-number
+                &__link
+                    color: $dark
+                &:nth-child(2)
+                    &::after
+                        content: '(Только для сообщений)'
+                        position: absolute
+                        max-width: 100px
+                        font-size: 9px
+                        line-height: 11px
+                        color: $dark
+                        bottom: -7px
+                        right: 20%
+    .main-screen
+        padding: 170px 0 70px
+        .main
+            max-width: 370px
+            &-suptitle
+                font-size: 14px
+            &-title
+                margin: 19px 0 22px
+                font-size: 32px
+            &-desc
+                font-size: 14px
+                margin-bottom: 50px
+            &-btn
+                font-size: 13px
+                padding: 13px 43px
+        .main-img
+            max-width: 400px
+            height: 600px
+    .receive
+        padding: 40px 0
+        &-bg
+            display: none
+        &-title
+            font-size: 32px
+        &-map
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            .card
+                display: flex
+                justify-content: center
+                width: 30%
+                flex-direction: column
+                margin: 0 10px
+                &:nth-child(1)
+                    margin-top: -60px
+                &:nth-child(2)
+                    margin-top: 0
+                &:nth-child(3)
+                    margin-top: 0
+                &:nth-child(4)
+                    margin-top: 0
+                &:nth-child(5)
+                    margin-top: 0
+                &:nth-child(6)
+                    margin-top: 0
+                &-img
+                    max-width: 120px
+                &-desc
+                    margin: 0 auto
+                    max-width: 120px
+                    font-size: 14px
+                    &__bold
+                        font-size: 14px
+    .benefit
+        padding: 40px 0 60px
+        &-title
+            font-size: 32px
+        .swiper-container
+            height: 400px   
+            width: 600px
+        &-card
+            max-width: 265px
+            min-height: 370px
+            margin: 0 10px
+            padding: 15px 15px 0 15px
+            &__title
+                font-size: 17px
+                margin-bottom: 18px
+            &__desc
+                    font-size: 14px
+            &__img
+                bottom: 30px
+                right: 20px
+        &-menu
+            margin-top: 20px
+    .about
+        padding: 50px 0
+        &-content
+            max-width: 100%
+        &-img
+            display: none
+        &-title
+            margin: 15px 0 25px
+            font-size: 22px
+            
+        &-cards
+            display: flex
+            flex-wrap: wrap
+        &-card
+            margin-bottom: 15px
+            max-width: 48%
+            margin-right: 10px
+            &__img
+                max-width: 20px
+                height: 20px
+                margin-right: 10px
+                margin-top: 4px
+            &-text
+                &__title
+                    font-size: 16px
+                    margin-bottom: 7px
+                &__desc
+                    font-size: 14px
+        &-btn
+            margin: 40px auto 0
+    .levels
+        padding: 60px 0 60px
+        &-title
+            font-size: 20px
+        &-card
+            padding: 18px 20px 0
+            min-height: 400px
+            margin: 0 10px
+            &__title
+                font-size: 42px
+            &__subtitle
+                font-size: 16px
+                margin-bottom: 20px
+            &__secondtitle
+                font-size: 15px
+            &__desc
+                font-size: 14px
+                margin-bottom: 15px
+            &__btn
+                font-size: 14px
+                max-width: 46%
+        &-menu
+            margin-top: 40px
+            &__desc
+                font-size: 13px
+                max-width: 470px
+    .result
+        padding: 70px 0
+        &-title
+            font-size: 30px
+        &-img
+            display: none
+        &-map
+            flex-wrap: wrap
+            justify-content: center
+            height: 600px
+            margin-bottom: 60px
+            .card
+                margin: 50px 10px
+                max-width: 250px
+                &-img
+                    margin: 0 auto 54px
+                &-desc
+                    font-size: 15px
+                &::after
+                    padding: 34px 
+                    width: 120px
+                    height: 120px
+                    text-align: center
+                    margin-left: -60px
+                    top: -35px !important
+                    left: 50%
+                &:nth-child(1)
+                    margin-top: -20px
+                    &::after
+                        top: -17px !important
+                &:nth-child(2)
+                    margin-top: 0
+                    &::after
+                        top: 0
+                &:nth-child(3)
+                    margin-top: 0
+                    &::after
+                        top: 0
+                &:nth-child(4)
+                    margin-top: 0
+                    &::after
+                        top: 0
+                &:nth-child(5)
+                    margin-top: 0
+                    &::after
+                        top: 0
+    .cost
+        padding: 60px 0
+        &-title
+            font-size: 32px
+            margin: 20px auto 20px
+        &-form
+            margin-bottom: 30px
+            &-card
+                margin: 0 4px
+            &__label
+                font-size: 12px
+                width: 100px
+                padding: 12px 0 12px 28px
+                &::before
+                    left: 5px
+                &::after
+                    left: 5px
+        &-prices
+            font-size: 16px
+            margin-bottom: 25px
+            &__one
+                margin-bottom: 10px
+        &-btn
+            font-size: 13px
+    .reviews
+        padding: 70px 0 50px
+        &-title
+            font-size: 30px
+            margin: 20px auto 40px
+        &-card
+            margin: 0 10px
+            &__title
+                margin: 17px 0
+                font-size: 18px
+            &__desc
+                font-size: 15px
+        &-pagination
+            margin-top: 40px
+        &-bullet
+            width: 12px
+            height: 12px
+            border: 1px solid #DEDEFF
+            margin: 0 6px
+            &-active
+                border: 1px solid #3035C4
+        &-btn
+            margin: 30px auto 0
+            padding: 15px 55px
+    .tutor
+        padding: 20px 0
+        &-wrapper
+            padding: 30px 0 30px 30px
+        &-title
+            font-size: 23px
+            margin: 20px 0 15px
+        &-li
+            margin-bottom: 10px
+            font-size: 14px
+            &::before
+                font-size: 18px
+    .teachers
+        padding: 50px 0 0
+        &-title
+            font-size: 28px
+            max-width: 960px
+            margin: 20px auto 50px
+        &-card
+            &__name
+                font-size: 17px
+                margin: 30px 0 0
+            &__desc
+                font-size: 14px
+        .swiper-slide-active
+            .teachers-card
+                &__desc
+                    position: absolute
+                    width: 550px
+                    bottom: -160px
+                    left: -180px
+        .swiper-button-prev, .swiper-button-next
+            top: 110px
+    .footer
+        margin-top: 0
+        padding: 80px 0
+        &-title
+            font-size: 26px
+            margin: 0 auto 32px
+            max-width: 620px
+        &-set
+            &-btn
+                padding: 13px 0
+                font-size: 14px
+                width: 220px
+                margin: 0 10px
+@media (max-width: 928px)
+    .main-screen
+        .main
+            max-width: 370px
+            &-suptitle
+                font-size: 14px
+            &-title
+                margin: 19px 0 22px
+                font-size: 32px
+            &-desc
+                font-size: 14px
+                margin-bottom: 50px
+            &-btn
+                font-size: 13px
+                padding: 13px 43px
+        .main-img
+            max-width: 320px
+            height: 100%
+@media (max-width: 768px)
+    .sticky
+        padding: 15px 0
+    .main-screen
+        .main-img
+            display: none
+@media (max-width: 650px)
+    .container
+        max-width: 335px
+    .suptitle
+        font-size: 14px
+        &::before
+            width: 20px
+            margin-right: 8px
+    .red-btn
+        padding: 16px 58px
+        font-family: 'Montserrat', sans-serif
+        color: #ffffff
+        border: none
+        background: $red
+        border-radius: 30px
+        cursor: pointer
+        font-weight: bold
+        font-size: 16px
+        line-height: 20px
+    .header
+        &-wrapper
+            .phones
+                &-number
+                    &__link
+                        display: none
+                    &:nth-child(2)
+                        &::after
+                            content: none
+    .main-screen
+        padding: 150px 0 100px
+        margin-bottom: 0
+        .main
+            text-align: center
+            max-width: 100%
+            &-suptitle
+                font-size: 16px
+            &-title
+                margin: 16px 0 24px
+                font-size: 32px
+            &-desc
+                font-size: 16px
+                margin-bottom: 60px
+            &-btn
+                font-size: 16px
+                line-height: 20px
+                width: 100%
+                padding: 16px 0
+    .receive
+        padding: 80px 0
+        .container
+            position: relative
+        &-bg
+            position: absolute
+            max-width: 100%
+            top: 10%
+            left: 0
+            z-index: -10
+        &-suptitle
+            justify-content: center
+        &-title
+            padding: 20px 0 50px
+            text-align: center
+            font-size: 32px
+        &-map
+            height: auto
+            .card
+                width: 45%
+                margin: 0
+                &:nth-child(1)
+                    margin-top: -22px
+                &:nth-child(3)
+                    margin-top: 21px
+                &:nth-child(5)
+                    margin-top: 21px
+                &-img
+                    max-width: 120px
+                &-desc
+                    max-width: 100%
+                    font-size: 14px
+                    text-align: center
+                    &__bold
+                        font-size: 14px
+    .benefit
+        padding: 40px 0 80px
+        &-suptitle
+            display: none
+        &-title
+            margin: 0 0 50px
+            font-size: 32px
+        .swiper-container
+            height: 470px   
+            width: 320px
+        &-card
+            width: 300px
+            min-height: 430px
+            margin: 0 20px
+            padding: 20px 20px 0 20px
+            &__title
+                font-size: 16px
+                margin-bottom: 0
+            &__desc
+                    font-size: 16px
+            &__img
+                bottom: 30px
+                right: 20px
+        &-menu
+            margin-top: 0
+            flex-wrap: wrap
+            position: relative
+            &__btn
+                margin-top: 50px
+                font-size: 16px
+                width: 100%
+                padding: 16px 0
+                order: 1
+                    
+    .about
+        padding: 0 0 80px
+        .wrapper
+            flex-wrap: wrap
+        &-content
+            max-width: 100%
+        &-img
+            display: block
+            margin: 0 auto
+            max-width: 226px
+            height: auto
+        &-suptitle
+            justify-content: center
+        &-title
+            margin: 20px 0 50px
+            font-size: 32px
+            text-align: center
+        &-card
+            display: flex
+            margin-bottom: 24px
+            margin-right: 0
+            max-width: 100%
+            &__img
+                max-width: 20px
+                height: 20px
+                margin-right: 20px
+                margin-top: 4px
+            &-text
+                &__title
+                    font-size: 18px
+                    margin-bottom: 12px
+                &__desc
+                    font-size: 16px
+        &-btn
+            width: 100%
+            padding: 16px 30px
+            display: flex
+            margin: 60px auto 0
+    .levels
+        padding: 80px 0
+        &-title
+            font-size: 30px
+            text-align: center
+            max-width: 100%
+            margin: 0 auto 50px
+        &-card
+            display: flex
+            flex-direction: column
+            background: #ffffff
+            padding: 24px 32px 0
+            min-height: 524px
+            margin: 0 15px
+            &__title
+                font-size: 44px
+            &__subtitle
+                font-size: 16px
+                margin-bottom: 24px
+            &__secondtitle
+                font-size: 16px
+                margin-bottom: 8px
+            &__desc
+                font-size: 16px
+                margin-bottom: 16px
+            &__btn
+                font-size: 16px
+                max-width: 61%
+        &-menu
+            margin-top: 30px
+            flex-wrap: wrap
+            &__arr
+                display: flex
+                justify-content: center
+                align-center: center
+                border: none
+                cursor: pointer
+                background: #fff
+                border-radius: 50%
+                padding: 20px 23px
+                box-shadow: 0px 10px 40px rgba(0, 11, 68, 0.22)
+            &__desc
+                order: 3
+                max-width: 100%
+                margin-top: 30px
+                font-size: 14px
+                text-align: center
+    body
+        .result
+            padding: 80px 0
+            &-title
+                font-size: 29px
+                text-align: center
+                margin: 20px auto 50px
+                max-width: 100%
+            &-img
+                display: none
+            .container
+                .result-map
+                    display: flex
+                    justify-content: flex-end
+                    height: auto
+                    width: 335px
+                    margin-bottom: 0
+                    .card
+                        justify-content: space-between
+                        flex-direction: row
+                        align-items: center
+                        margin: 0 0 75px 0
+                        text-align: center
+                        max-width: 315px
+                        z-index: 10
+                        &-img
+                            margin: 0 54px 0 0
+                            max-width: 52px
+                            height: 52px
+                        &-desc
+                            max-width: 100%
+                            font-size: 15px
+                            text-align: start
+                        &::after
+                            text-align: center
+                            margin-left: 0
+                            top: -25px !important 
+                            left: -36px
+                        &:nth-child(1)
+                            margin-top: 0
+                            &::after
+                                top: 0
+                        &:nth-child(2)
+                            margin-top: 0
+                            &::after
+                                top: -17px !important
+                        &:nth-child(3)
+                            margin-top: 0
+                            &::after
+                                top: -17px !important
+                        &:nth-child(4)
+                            margin-top: 0
+                            &::after
+                                top: 0
+                        &:nth-child(5)
+                            margin-top: 0
+                            &::after
+                                top: -17px !important
+            &-btn
+                font-size: 16px
+                width: 100%
+                padding: 16px 30px
+                margin: 0 auto
+    .cost
+        padding: 80px 0
+        &-title
+            font-size: 30px
+            text-align: center
+            margin: 20px auto 30px
+            max-width: 100%
+        &-subtitle
+            font-size: 16px
+            margin-bottom: 20px
+            text-align: center
+        &-form
+            flex-wrap: wrap
+            margin-bottom: 20px
+            &-card
+                margin: 0 8px
+                width: 44%
+                margin-bottom: 20px
+            &__label
+                font-size: 14px
+                width: 158px
+                padding: 18px 22px 18px 42px
+                &::before
+                    left: 10px
+                    width: 20px
+                    height: 20px
+                &::after
+                    left: 10px
+        &-prices
+            font-size: 21px
+            line-height: 130%
+            margin-bottom: 60px
+            
+            &__one
+                margin-bottom: 30px
+        &-btn
+            display: flex
+            margin: 0 auto
+            width: 100%
+            font-size: 15px
+            padding: 16px 15px
+    .reviews
+        padding: 80px 0
+        &-title
+            font-size: 32px
+            text-align: center
+            margin: 20px auto 50px
+            max-width: 100%
+        &-card
+            display: flex
+            flex-direction: column
+            max-width: 350px
+            text-align: center
+            margin: 0 10px
+            &__title
+                margin: 24px 0
+                font-weight: 800
+                font-size: 20px
+            &__desc
+                font-size: 16px
+        &-pagination
+            margin-top: 50px
+        &-btn
+            display: flex
+            width: 100%
+            padding: 16px 105px
+            margin: 80px auto 0
+    .tutor
+        padding: 0 0 40px
+        &-wrapper
+            border-radius: 0
+            padding: 60px 20px
+        &-suptitle
+            justify-content: center
+            color: #ffffff
+        &-title
+            font-size: 30px
+            max-width: 100%
+            text-align: center
+            margin: 20px 0 32px
+        &-li
+            margin-bottom: 6px
+            font-size: 16px
+            line-height: 150%
+            &::before
+                font-size: 24px
+    .teachers
+        padding: 40px 0 80px
+        &-title
+            font-size: 26px
+            text-align: center
+            max-width: 100%
+            margin: 20px auto 50px
+        &-swiper
+            min-height: 600px
+        &-card
+            min-height: 585px
+            &__name
+                font-size: 24px
+                margin: 40px 0 20px
+            &__desc
+                font-size: 16px
+                line-height: 150%
+                max-width: 335px
+                margin: 0 auto
+        .swiper-slide-next,
+        .swiper-slide-prev,
+        .swiper-slide-duplicate-next,
+        .swiper-slide-duplicate-active
+            position: relative
+            .teachers-card
+                position: static
+                &__img
+                    margin-top: 40px
+                    max-width: 120px
+                    opacity: 1
+                &__name
+                    opacity: 1
+                &__desc
+                    opacity: 1
+        .swiper-slide-active
+            .teachers-card
+                width: 300px
+                margin: 0 8px
+                position: relative
+                &__desc
+                    position: absolute
+                    width: 280px
+                    bottom: -10px
+                    left: 0
+                    z-index: 999
+        .swiper-button-prev, .swiper-button-next
+            top: 110px
+    .footer
+        margin-top: 20px
+        text-align: center
+        padding: 100px 0
+        &-title
+            font-size: 30px
+            line-height: 130%
+            margin: 0 auto 52px
+            max-width: 100%
+        &-set
+            &-btn
+                padding: 16px 0
+                font-size: 16px
+                width: 100%
+                margin: 0 0 10px 0
+        &-btn__red
+            color: #ffffff
+            background: $red
