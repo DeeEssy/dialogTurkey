@@ -201,3 +201,39 @@ let scroll = target => {
     let headerOffset = document.querySelector('.header').clientHeight
     window.scrollTo(0, targetOffsetTop - headerOffset)
 }
+
+
+const costForm = document.querySelector('.cost-form')
+const costPricesNumber = document.querySelector('.cost-prices__number')
+const costPricesQuantity = document.querySelector('.cost-prices__quantity')
+const costFullPrice = document.querySelector('.cost-full-price')
+
+costForm.addEventListener('click', event => {
+    const target = event.target
+    const card = target.closest('.cost-form-card')
+    if (card.classList.contains('cost-form__id1')) {
+        costPricesNumber.textContent = '599'
+        costPricesQuantity.textContent = '7'
+        costFullPrice.textContent = '4 193'
+    }
+    if (card.classList.contains('cost-form__id2')) {
+        costPricesNumber.textContent = '539'
+        costPricesQuantity.textContent = '8'
+        costFullPrice.textContent = '4 312'
+    }
+    if (card.classList.contains('cost-form__id3')) {
+        costPricesNumber.textContent = '499'
+        costPricesQuantity.textContent = '16'
+        costFullPrice.textContent = '7 984'
+    }
+    if (card.classList.contains('cost-form__id4')) {
+        costPricesNumber.textContent = '459'
+        costPricesQuantity.textContent = '24'
+        costFullPrice.textContent = '11 016'
+    }
+    if (card.classList.contains('cost-form__id5')) {
+        costPricesNumber.textContent = '429'
+        costPricesQuantity.textContent = '32'
+        costFullPrice.textContent = '13 728'
+    }
+})
