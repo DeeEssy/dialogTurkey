@@ -90,3 +90,27 @@ window.addEventListener('scroll', () => {
     let header = document.querySelector('.header')
     header.classList.toggle('sticky', window.scrollY > 740)
 })
+
+const trackScroll = () => {
+    let scrolled = window.scrollY;
+    let coords = document.documentElement.clientHeight;
+
+    if (scrolled > coords) {
+        goTopBtn.classList.add('active-top');
+    }
+    if (scrolled < coords) {
+        goTopBtn.classList.remove('active-top');
+    }
+}
+
+function backToTop() {
+    if (window.scrollY > 0) {
+        window.scrollBy(0, -30);
+        setTimeout(backToTop, 0);
+    }
+}
+
+const goTopBtn = document.querySelector('.toTop');
+
+window.addEventListener('scroll', trackScroll);
+goTopBtn.addEventListener('click', backToTop);

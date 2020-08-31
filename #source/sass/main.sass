@@ -21,15 +21,23 @@ body
     &:hover
         background: $red
 .toTop
-    height: 50px
-    width: 50px
+    display: none
+    justify-content: center
+    align-items: center
+    padding: 15px
     border-radius: 50%
     background: $red
     position: fixed
     bottom: 40px
     cursor: pointer
+    text-align: center
     right: 30px
-    z-index: 99
+    z-index: 999
+    &__img
+        width: 25px
+        height: 25px
+.active-top
+    display: flex
 .page
     max-width: 1920px
     margin: 0 auto
@@ -1162,6 +1170,9 @@ body
         .main-img
             display: none
 @media (max-width: 650px)
+    .toTop
+        bottom: 20px
+        right: 20px
     .container
         max-width: 335px
     .suptitle
@@ -1312,7 +1323,7 @@ body
                     font-size: 16px
         &-btn
             width: 100%
-            padding: 16px 30px
+            padding: 16px 27px
             display: flex
             margin: 60px auto 0
     .levels
@@ -1423,7 +1434,7 @@ body
             &-btn
                 font-size: 16px
                 width: 100%
-                padding: 16px 30px
+                padding: 16px 28px
                 margin: 0 auto
     .cost
         padding: 80px 0
