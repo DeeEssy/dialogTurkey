@@ -5,6 +5,7 @@ $light: #DEDEFF
 *, *::after, *::before
     outline: none
     box-sizing: border-box
+    -webkit-tap-highlight-color: transparent
 ul, li
     padding: 0
 body
@@ -20,6 +21,8 @@ body
     border-radius: 20px
     &:hover
         background: $red
+.no-scroll
+    overflow: hidden
 .toTop
     display: none
     justify-content: center
@@ -160,6 +163,7 @@ body
             font-weight: bold
             font-size: 16px
             line-height: 20px
+            cursor: pointer
             text-align: center
             color: #FFFFFF
             padding: 16px 63px
@@ -369,15 +373,6 @@ body
             line-height: 150%
             color: $dark
             margin-bottom: 20px
-        &__btn
-            color: $blue
-            font-style: normal
-            font-family: 'Montserrat', sans-serif
-            font-weight: 800
-            text-decoration: none
-            font-size: 16px
-            line-height: 130%
-            max-width: 44%
     &-menu
         display: flex
         margin-top: 50px
@@ -753,6 +748,123 @@ body
     &-btn__red
         color: #ffffff
         background: $red
+.popup
+    display: none
+    position: fixed
+    z-index: 9999
+    top: 0
+    left: 0
+    background: rgba(0, 0, 0, .7)
+    width: 100%
+    height: 100%
+    overflow: auto
+    &-wrapper
+        display: table
+        height: 100%
+        width: 100%
+        .popup-inner
+            display: table-cell
+            vertical-align: middle
+            padding: 50px 0
+            .popup-content
+                position: relative
+                background: #ffffff
+                padding: 60px 20px
+                border-radius: 20px
+                max-width: 730px
+                margin: 0 auto
+                .btn-close
+                    position: absolute
+                    border: none
+                    cursor: pointer
+                    background: none
+                    padding: 0
+                    width: 30px
+                    top: 20px
+                    right: 20px
+                    height: 30px
+                    display: inline-block
+                    transition: transform .2s, opacity .2s
+                    &::before,&::after
+                        content: ''
+                        position: absolute
+                        background: $dark
+                        height: 22px
+                        width: 3px
+                        border-radius: 10px
+                        border: 10px
+                        top: 50%
+                        transform: translateY(-50%)
+                    &::before
+                        transform: translateY(-50%) rotate(45deg)
+                    &::after
+                        transform: translateY(-50%) rotate(-45deg)
+                    &:hover
+                        transform: scale(1.1)
+                    &:active
+                        transform: scale(.9)
+                        opacity: .8
+.popup-enter
+    .popup-wrapper
+        .popup-inner
+            .popup-content
+                padding: 0
+                max-width: 800px
+                display: flex
+    &-text
+        display: flex
+        flex-direction: column
+        margin-left: 50px
+    &__title
+        font-size: 32px
+        line-height: 130%
+        font-family: 'Montserrat', sans-serif
+        font-weight: 800
+        color: $blue
+        margin: 50px 0 12px
+    &__desc
+        font-size: 12px
+        line-height: 150%
+        color: $dark
+        max-width: 300px
+    &-form
+        margin: 36px 0 32px
+        display: flex
+        flex-direction: column
+    &-card
+        display: flex
+        flex-direction: column
+        margin-bottom: 16px
+        &__span
+            font-weight: bold
+            font-family: 'Montserrat', sans-serif
+            color: $dark
+            margin-bottom: 8px
+            font-size: 14px
+            line-height: 17px
+            margin-left: 6px
+        &__input
+            padding: 19px 0 19px 20px
+            font-size: 14px
+            line-height: 17px
+            color: $dark
+            border-radius: 40px
+            border: 1px solid #E9EAEC
+            font-family: 'Lato', sans-serif
+            &::-moz-placeholder 
+                color: #BDBFC5
+            &::-webkit-input-placeholder
+                color: #BDBFC5
+            &:-ms-input-placeholder
+                color: #BDBFC5
+            &::-ms-input-placeholder
+                color: #BDBFC5
+            &::placeholder
+                color: #BDBFC5
+    &__btn
+        margin-top: 15px
+.popup-active
+    display: block
 @media (max-width: 1400px)
     .container
         max-width: 1000px
@@ -1169,12 +1281,24 @@ body
     .main-screen
         .main-img
             display: none
+    .popup-enter
+        &-img
+            max-width: 40%
 @media (max-width: 650px)
     .toTop
         bottom: 20px
         right: 20px
     .container
         max-width: 335px
+    .popup-enter
+        .popup-wrapper
+            .popup-inner
+                padding: 0
+        &-img
+            display: none
+        &-text
+            margin: 0 auto
+            text-align: center
     .suptitle
         font-size: 14px
         &::before
@@ -1187,7 +1311,6 @@ body
         border: none
         background: $red
         border-radius: 30px
-        cursor: pointer
         font-weight: bold
         font-size: 16px
         line-height: 20px
