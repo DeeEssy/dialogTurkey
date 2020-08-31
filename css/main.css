@@ -1056,6 +1056,9 @@ body {
   color: #BDBFC5;
 }
 .popup-enter__btn {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
   margin-top: 15px;
 }
 

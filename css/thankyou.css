@@ -297,6 +297,28 @@ body {
     font-size: 13px;
   }
 }
+@media (max-width: 800px) {
+  .main-title {
+    font-size: 32px;
+    max-width: 500px;
+  }
+}
+@media (max-width: 410px) {
+  .main-title {
+    font-size: 26px;
+  }
+
+  .form-section__title {
+    font-size: 28px;
+  }
+  .form-section .form-card__bold {
+    font-size: 18px;
+  }
+  .form-section .form-card-name__input {
+    width: 160px;
+    padding: 16px 0 16px 24px;
+  }
+}
 @media (max-width: 650px) {
   .toTop {
     bottom: 20px;
