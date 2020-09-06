@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Диалог | Курсы турецкого языка</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="lib/reset.css">
     <link rel="stylesheet" href="css/thankyou.css">
 </head>
+
 <body>
     <div class="page">
         <header class="header">
@@ -29,97 +32,123 @@
         <main class="main">
             <div class="container">
                 <h2 class="main-title">Вы успешно
-                зарегистрировались на вебинар!</h2>
+                    зарегистрировались на вебинар!</h2>
             </div>
         </main>
         <section class="form-section">
             <div class="container">
                 <h3 class="form-section__title">Анкета участника вебинара:</h3>
-                <p class="form-section__desc">Заполните анкету. Она позволит нам понять, какие участники будут на вебинаре и о чём нужно говорить в первую очередь.
-                Анкета анонимная. Давайте, пожалуйста, правдивые ответы. Так мы сделаем вебинар максимально полезным именно для Вас.<br><br>
-                <span class="form-section__bold">Это займет меньше 1 (одной) минуты!</span></p>
-                <form action="index.html" class="form">
+                <p class="form-section__desc">Заполните анкету. Она позволит нам понять, какие участники будут на
+                    вебинаре и о чём нужно говорить в первую очередь.
+                    Анкета анонимная. Давайте, пожалуйста, правдивые ответы. Так мы сделаем вебинар максимально полезным
+                    именно для Вас.<br><br>
+                    <span class="form-section__bold">Это займет меньше 1 (одной) минуты!</span></p>
+                <form action="mail.php" method="POST" class="form">
                     <div class="form-card form-card-name">
                         <span class="form-card__bold">1. Ваше имя</span>
-                        <input class="form-card-name__input" required="" type="text" placeholder="Имя">
+                        <input class="form-card-name__input" name="user_name" required="" type="text" placeholder="Имя">
                     </div>
                     <div class="form-card form-card-age">
                         <span class="form-card__bold">2. Сколько вам лет?</span>
                         <div class="form-card-age__choice">
-                            <input class="form-card__input" name="age" type="radio" required=""
-                                id="form-card-age__radio1">
-                            <label for="form-card-age__radio1" class="form-card-age__label form-card__label">Меньше 18 лет</label>
+                            <input class="form-card__input" name="user_age" type="radio" value="Меньше 18 лет"
+                                required="" id="form-card-age__radio1">
+                            <label for="form-card-age__radio1" class="form-card-age__label form-card__label">Меньше 18
+                                лет</label>
                         </div>
                         <div class="form-card-age__choice">
-                            <input class="form-card__input" name="age" type="radio" id="form-card-age__radio2">
-                            <label for="form-card-age__radio2" class="form-card-age__label form-card__label">18 - 25 лет</label>
+                            <input class="form-card__input" name="user_age" type="radio" value="18 - 25 лет"
+                                id="form-card-age__radio2">
+                            <label for="form-card-age__radio2" class="form-card-age__label form-card__label">18 - 25
+                                лет</label>
                         </div>
                         <div class="form-card-age__choice">
-                            <input class="form-card__input" name="age" type="radio" id="form-card-age__radio3">
-                            <label for="form-card-age__radio3" class="form-card-age__label form-card__label">26 - 45 лет</label>
+                            <input class="form-card__input" name="user_age" type="radio" value="26 - 45 лет"
+                                id="form-card-age__radio3">
+                            <label for="form-card-age__radio3" class="form-card-age__label form-card__label">26 - 45
+                                лет</label>
                         </div>
                         <div class="form-card-age__choice">
-                            <input class="form-card__input" name="age" type="radio" id="form-card-age__radio4">
-                            <label for="form-card-age__radio4" class="form-card-age__label form-card__label">45 - 60 лет</label>
+                            <input class="form-card__input" name="user_age" type="radio" value="45 - 60 лет"
+                                id="form-card-age__radio4">
+                            <label for="form-card-age__radio4" class="form-card-age__label form-card__label">45 - 60
+                                лет</label>
                         </div>
                         <div class="form-card-age__choice">
-                            <input class="form-card__input" name="age" type="radio" id="form-card-age__radio5">
-                            <label for="form-card-age__radio5" class="form-card-age__label form-card__label">60+ лет</label>
+                            <input class="form-card__input" name="user_age" type="radio" value="60+ лет"
+                                id="form-card-age__radio5">
+                            <label for="form-card-age__radio5" class="form-card-age__label form-card__label">60+
+                                лет</label>
                         </div>
                     </div>
                     <div class="form-card form-card-target">
                         <span class="form-card__bold">3. Какая у вас цель занятий?</span>
-                        <textarea cols="30" rows="10" placeholder="Опишите своими словами" class="form-card-target__textarea"></textarea>
+                        <textarea cols="30" rows="10" placeholder="Опишите своими словами" name="user_textarea"
+                            class="form-card-target__textarea"></textarea>
                     </div>
                     <div class="form-card form-card-level">
                         <span class="form-card__bold">4. Какой у вас уровень владения турецким?</span>
                         <div class="form-card-level__choice">
-                            <input class="form-card__input" name="level" type="radio" required=""
-                                id="form-card-level__radio1">
-                            <label class="form-card__label form-card-level__label" for="form-card-level__radio1">нулевой (вообще ничего не знаю)</label>
+                            <input class="form-card__input" name="user_level" value="нулевой (вообще ничего не знаю)"
+                                type="radio" required="" id="form-card-level__radio1">
+                            <label class="form-card__label form-card-level__label" for="form-card-level__radio1">нулевой
+                                (вообще ничего не знаю)</label>
                         </div>
                         <div class="form-card-level__choice">
-                            <input class="form-card__input" name="level" type="radio" id="form-card-level__radio2">
-                            <label class="form-card__label form-card-level__label" for="form-card-level__radio2">что-то знаю</label>
+                            <input class="form-card__input" name="user_level" value="что-то знаю" type="radio"
+                                id="form-card-level__radio2">
+                            <label class="form-card__label form-card-level__label" for="form-card-level__radio2">что-то
+                                знаю</label>
                         </div>
                         <div class="form-card-level__choice">
-                            <input class="form-card__input" name="level" type="radio" id="form-card-level__radio3">
-                            <label class="form-card__label form-card-level__label" for="form-card-level__radio3">начальный (А1)</label>
+                            <input class="form-card__input" name="user_level" value="начальный (А1)" type="radio"
+                                id="form-card-level__radio3">
+                            <label class="form-card__label form-card-level__label"
+                                for="form-card-level__radio3">начальный (А1)</label>
                         </div>
                         <div class="form-card-level__choice">
-                            <input class="form-card__input" name="level" type="radio" id="form-card-level__radio4">
-                            <label class="form-card__label form-card-level__label" for="form-card-level__radio4">базовый (А2)</label>
+                            <input class="form-card__input" name="user_level" value="базовый (А2)" type="radio"
+                                id="form-card-level__radio4">
+                            <label class="form-card__label form-card-level__label" for="form-card-level__radio4">базовый
+                                (А2)</label>
                         </div>
                         <div class="form-card-level__choice">
-                            <input class="form-card__input" name="level" type="radio" id="form-card-level__radio5">
-                            <label class="form-card__label form-card-level__label" for="form-card-level__radio5">средний (В1-В2)</label>
+                            <input class="form-card__input" name="user_level" value="средний (В1-В2)" type="radio"
+                                id="form-card-level__radio5">
+                            <label class="form-card__label form-card-level__label" for="form-card-level__radio5">средний
+                                (В1-В2)</label>
                         </div>
                         <div class="form-card-level__choice">
-                            <input class="form-card__input" name="level" type="radio" id="form-card-level__radio6">
-                            <label class="form-card__label form-card-level__label" for="form-card-level__radio6">продвинутый (С1)</label>
+                            <input class="form-card__input" name="user_level" value="продвинутый (С1)" type="radio"
+                                id="form-card-level__radio6">
+                            <label class="form-card__label form-card-level__label"
+                                for="form-card-level__radio6">продвинутый (С1)</label>
                         </div>
                     </div>
                     <div class="form-card form-card-time">
                         <span class="form-card__bold">5. Как быстро вы хотите прокачать турецкий для вашей цели?</span>
                         <div class="form-card-time__choice">
-                            <input class="form-card__input" name="time" required="" type="radio"
+                            <input class="form-card__input" name="user_time" value="2-3 месяца" required="" type="radio"
                                 id="form-card-time__radio1">
                             <label class="form-card__label" for="form-card-time__radio1">2-3 месяца</label>
                         </div>
                         <div class="form-card-time__choice">
-                            <input class="form-card__input" name="time" type="radio" id="form-card-time__radio2">
+                            <input class="form-card__input" name="user_time" value="3-6 месяцев" type="radio"
+                                id="form-card-time__radio2">
                             <label class="form-card__label" for="form-card-time__radio2">3-6 месяцев</label>
                         </div>
                         <div class="form-card-time__choice">
-                            <input class="form-card__input" name="time" type="radio" id="form-card-time__radio3">
+                            <input class="form-card__input" name="user_time" value="6-12 месяцев" type="radio"
+                                id="form-card-time__radio3">
                             <label class="form-card__label" for="form-card-time__radio3">6-12 месяцев</label>
                         </div>
                     </div>
-                    <button class="form-btn red-btn">Заполнить анкету</button>
+                    <button type="submit" class="form-btn red-btn">Заполнить анкету</button>
                 </form>
             </div>
         </section>
     </div>
     <script src="js/main.js"></script>
 </body>
+
 </html>
